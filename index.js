@@ -1,12 +1,19 @@
-
 const express = require('express');
 require('./services/passport');
-const authRoutes  = require('./routes/authRoutes');
+
 
 const app = express();
-mongoose.connect(keys.mongoURI);
 
-authRoutes(app);
+require('./routes/authRoutes')(app);
+
+//const mongoose = require('mongoose');
+const keys = require('./config/keys');
+
+//mongoose.connect(keys.mongoURI);
+
+
+
+
 
 const PORT = process.env.PORT || 5000;    //For Heroku (prod env) || for development environment
 
