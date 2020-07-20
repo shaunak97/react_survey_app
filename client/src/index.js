@@ -16,7 +16,7 @@ ReactDom.render(
 
  );
 
-
+ 
 //Redux thunk gives direct access to Dispatch function
 //Dispatch sends the action to all the different reducers
 // in the store, causing them to instantly recalculate
