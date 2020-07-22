@@ -9,7 +9,7 @@ const surveySchema = new Schema({
   recipients: [RecipientSchema], //Sub document collection
   yes: { type: Number, default: 0 },
   no: { type: Number, default: 0 },
-  _user: { type: Schmea.Types.ObjectId, ref: 'User' }, //It is a relationship field between a given schema and a User
+  _user: { type: Schema.Types.ObjectId, ref: 'User' }, 
   dateSent: Date,
   lastResponded: Date
 });
