@@ -7,6 +7,8 @@ import reduxThunk from 'redux-thunk';
 
 import App from './components/App';
 import reducers from './reducers';
+import axios from 'axios';
+window.axios = axios;
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
@@ -16,7 +18,7 @@ ReactDom.render(
 
  );
 
- 
+
 //Redux thunk gives direct access to Dispatch function
 //Dispatch sends the action to all the different reducers
 // in the store, causing them to instantly recalculate
