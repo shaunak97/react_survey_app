@@ -1,6 +1,8 @@
+//const sendgrid = require('@sendgrid/mail');
 const sendgrid = require('sendgrid');
 const helper = sendgrid.mail;
 const keys = require('../config/keys');
+//const keys = "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";
 
 class Mailer extends helper.Mail {
   constructor({ subject, recipients }, content) {
@@ -24,7 +26,7 @@ class Mailer extends helper.Mail {
   }
   addClickTracking() {
     const trackingSettings = new helper.TrackingSettings();
-    consst clickTracking = new helper.ClickTracking(true, true);
+    const clickTracking = new helper.ClickTracking(true, true);
     trackingSettings.setClickTracking(clickTracking);
     this.addTrackingSettings(trackingSettings);
   }
